@@ -46,13 +46,13 @@
             <section>
               <h1>😞</h1>
               <aside class="notes" data-markdown>
-                * I didn't prepare a presentation
+                * I never start with an apology, but this time I feel you deserve to get one.
+                * As, well, that's embarrasing. I didn't prepare a presentation
+                * But you have to understand how severe it is:
                 * I've traveled all the way from Israel, almost 10,000KM
                 * It costs hundereds of dollars, not to mention the carbon footprint
                 * My wife is now alone with my three kids
-                * The ticket you paid, probably sponsoers some of my travel cost.
-                * They probably wanted to bring really delicious bento, but because I came here,
-                it will be something more modest.
+                * The event organizer, who worked hard to prepare this event, have promised you an interesting technical keyonote
                 * But I didn't prepare a presentation.
               </aside>
             </section>
@@ -88,34 +88,36 @@
               <aside class="notes" data-markdown>
                 * ... and President elect Justin bieber is warning against intergalactic war
                 * Then, one of your granchildren asks you. Grandpa, or Grandma.
-                * Do you remember there was 50 years ago a Drupal conference.
+                * Do you remember there was 50 years ago a Drupal camp in Tokyo.
                 * Drupal.. Drupal.. Wow, you haven't heard that word for years
                 * Grandpa, Grandma - do you remember how fast Drupal 8 was in comparison to Drupal 7.
-                Or the difference between Filter and Contectual filter in views? Or which checkbox to check
+                Or the difference between Filter and Contextual filter in views? Or which checkbox to check
                 to get url alias to work.
                 * I think you won't remember.
                 * So Granpa, Grandma what do you remember?
                 * Suddenly you'll remember the idiot that came all the way to Japan, but forgot to prepare a presentation.
                 * And you see, I didn't have to do much for you to remember this. In fact I had to do very little - I had
                   to _not_ prepare anything.
-                </head>
-
+                * But don't worry, we're in 2017, no flying cars ,no alien, and no integalctic war.
               </aside>
             </section>
 
 
             <!-- Post-truth era -->
             <section data-background="https://cloud.githubusercontent.com/assets/125707/21800412/359ff7d4-d726-11e6-9786-b5165ad8ef70.jpg">
-              <div style="background-color: black; opacity: 0.75; padding: 20px;">
-                <h2>Post-truth era</h2>
-              </div>
+              <aside class="notes" data-markdown>
+                * I mean, so far no integalctic war. But, stay tuned.
+              </aside>
             </section>
 
             <section>
-                <h2>Functional Programing</h2>
+                <h4>Elm, OG8, Price Offers, Proof of Concepts</h4>
                 <small>and other relatively accurate stories</small>
                 <aside class="notes" data-markdown>
-                    * Lean back, I'm going to show you what started as a detour and now own path.
+                    * While it's a techincal presentation, you don't need to understand every line of code.
+                    * My goal is show you different concepts that are useful for me and my company, and might be useful for you as-well.
+                    * And what's most important is for me to make it approachable for you. You don't have to be a Drupal
+                    , or Elm, or JS ninja to start it. You just need to do the first step.
                 </aside>
             </section>
 
@@ -135,12 +137,14 @@
             <section>
                 <h2>The Gizra stack</h2>
                 <ul>
+                    <li>Drupal</li>
                     <li>Elm</li>
                     <li>Yesod (Haskell)</li>
-                    <li>Drupal</li>
                 </ul>
 
                 <aside class="notes" data-markdown>
+                    * I call it the Gizra stack, because it's quite unique.
+                    * And before we dive into what Elm is ..
                 </aside>
             </section>
 
@@ -149,24 +153,28 @@
                 <img src="https://cloud.githubusercontent.com/assets/125707/20650852/5836e1d4-b4e1-11e6-870c-d9387fd5ae74.jpg" alt="" />
 
                 <aside class="notes" data-markdown>
-                  * This is our price offer
-                  * We now understand the budget dictates your project
+                  * To give some context, here's our price offer
+                  * Not long ago we have finally understood that budget dictates the project
+                  * That is, we treat every project as a fixed price. No matter if you are getting as time and material, there's always some pre-determined budget behind
+                  * (Unless you are very lucky, and have a client with endless money that never ends, and in that case, make sure not to tell me about them, as I'll try to still them from you)
+                  * The reason we say budget dictates the project, no matter how many features a client imagines, you are able to do only that ones they are going to pay for.
+                  * A client always imagines they will get more. $20K worth of functionality. And that's a problem, because you don't want them to get dissapointed
+                  * How do you set expectations? How do you communicate exactly what they will get.
                   * We call it budget googles.
+                  * Navbar should be done in 4 hours, Period. I want to be accurate.
+                  * Why do I insisit on this point?
                 </aside>
-            </section>
-
-            <!-- BOA -->
-            <section>
-               <img src="https://cloud.githubusercontent.com/assets/125707/21800221/521feffa-d725-11e6-9489-c2ab5ddcea16.gif" alt="" />
             </section>
 
             <section>
                 <h2>Clients pay for the features</h2>
                 <small>not the bugs</small>
                 <aside class="notes" data-markdown>
+                    * Bugs are very costly (even more than they might appear)
                     * Need to fix, costs you money
                     * Takes your time - deadline
-                    * Client disaapointed. Mechanic example
+                    * Client disapointed. Mechanic example
+                    * As developers we expect the client be ok over and over with the fact that breaks are not working.
                     * Devs/ Account manager moral
                 </aside>
             </section>
@@ -186,12 +194,24 @@
 
             <section>
                 <h2>Correctness</h2>
-        <small>and my expectations from computers</small>
+                <small>and my expectations from computers</small>
+                <aside class="notes" data-markdown>
+                    * My expectations of computer and programming languages after being in the
+                    functional programming world for 2 years.
+                </aside>
             </section>
 
             <section>
                 <h2>Elm</h2>
                 <small>Generate JavaScript with great performance and no runtime exceptions</small>
+
+                <aside class="notes" data-markdown>
+                    * Functional programming language. It compiles to JS. But it's not Typescirpt
+                    * It doesn't try to fix JS. But rather say, JS is wonderful, but as humans we shouldn't interact with it.
+                    * Staticlly typed. It has an amazing compiler which makes sure there are no runtime errors. It's immutable.
+                    * In general after years of Angualr 1, and playing a bit with React, Front end has became fun again.
+                    * I'm going to show you the craziest web app you ever seen. Ready?
+                </aside>
             </section>
 
       <!-- Counter Example -->
@@ -248,13 +268,13 @@ view model =
 
         </code></pre>
         <aside class="notes" data-markdown>
-               </aside>
+       </aside>
       </section>
 
-            <!-- Compiler assitance -->
-            <section>
-                <img src="https://cloud.githubusercontent.com/assets/125707/20651071/8335f4e2-b4e6-11e6-801a-99c5c262673f.jpg" alt="" />
-            </section>
+    <!-- Compiler assitance -->
+    <section>
+        <img src="https://cloud.githubusercontent.com/assets/125707/20651071/8335f4e2-b4e6-11e6-801a-99c5c262673f.jpg" alt="" />
+    </section>
 
 
       <section>
@@ -276,8 +296,9 @@ viewAvatar url =
           </code>
         </pre>
         <aside class="notes" data-markdown>
-          * This looks ok
-                </aside>
+          * Lets setup one level
+          * This looks ok, and it compiles.
+        </aside>
       </section>
 
       <section>
@@ -330,13 +351,13 @@ type Bool = False | True
       <section>
         <pre>
           <code class="elm" data-trim>
-type UserType = Anonymous | Pending Integer | Authenticated String
+type UserType = Anonymous | Authenticated String | Premium String Date
           </code>
         </pre>
         <aside class="notes" data-markdown>
           * User type can be either one.
           * Pending and Authenticated are wrapping a value.
-            </aside>
+        </aside>
       </section>
 
       <section>
@@ -475,6 +496,11 @@ type alias WebData a =
     RemoteData Http.Error a
           </code>
         </pre>
+
+        <aside class="notes" data-markdown>
+          * A common pattern in Elm
+          * It helps us to re-think with types
+        </aside>
       </section>
 
       <section>
@@ -497,6 +523,7 @@ debugUser =
 
         <aside class="notes" data-markdown>
           * Using webdata, starting with NotAsked
+          * How easy to put a spinner, because you have the exact state.
         </aside>
       </section>
 
@@ -505,9 +532,9 @@ debugUser =
       <section>
         <img src="http://www.gizra.com/assets/images/posts/elm-i18n/image1.gif" alt="" />
 
-                <aside class="notes" data-markdown>
-                    * Learn how to re-think with types
-                </aside>
+        <aside class="notes" data-markdown>
+            * Learn how to re-think with types
+        </aside>
       </section>
 
       <section>
@@ -565,6 +592,25 @@ translate lang id =
                 <img src="https://cloud.githubusercontent.com/assets/125707/20682288/10353f28-b5b0-11e6-9e49-afc4b980afc1.jpg" alt="" />
             </section>
 
+            <!-- Budget Googles -->
+            <section>
+                <img src="https://cloud.githubusercontent.com/assets/125707/20650852/5836e1d4-b4e1-11e6-870c-d9387fd5ae74.jpg" alt="" />
+
+                <aside class="notes" data-markdown>
+                  * Circle back to our budget googles.
+                  * Many advantages, but still one big disadvantage: TMI: Too much infomation
+                </aside>
+            </section>
+
+            <!-- BOA -->
+            <section>
+               <img src="https://cloud.githubusercontent.com/assets/125707/21800221/521feffa-d725-11e6-9489-c2ab5ddcea16.gif" alt="" />
+
+               <aside class="notes" data-markdown>
+                 * New technique we are using as pre-sale is create proof of concepts.
+               </aside>
+            </section>
+
             <!-- Yesod -->
             <section>
                 <img src="https://cloud.githubusercontent.com/assets/125707/20651098/0daf5924-b4e7-11e6-846d-5f8f7a7abe37.jpg" alt="" />
@@ -595,30 +641,45 @@ addStylesheet $ StaticR css_bootstrap_css
 
             <section>
                 <h2>OG8</h2>
-        <aside class="notes" data-markdown>
-        </aside>
-            </section>
-
-            <!-- PR removes code -->
-            <section>
-                <img src="https://cloud.githubusercontent.com/assets/125707/20651123/985dab0c-b4e7-11e6-9ae3-e01104c31cbc.jpg" alt="" />
+                <aside class="notes" data-markdown>
+                </aside>
             </section>
 
             <!-- OG8 data structure -->
             <section>
               <img src="http://www.gizra.com/assets/images/posts/og8-development-mindset/image2.jpg" alt="" />
+              <aside class="notes" data-markdown>
+                  * As simple as it looks, I was actually able to get it wrong. Twice.
+                  * First a group was it own entity, and after membership was used also for non-users.
+                  * There were good reasons why I did it, but they were wrong
+                  * ... and the next slide shows what was wrong.
+              </aside>
+            </section>
+
+            <!-- PR removes code -->
+            <section>
+                <img src="https://cloud.githubusercontent.com/assets/125707/20651123/985dab0c-b4e7-11e6-9ae3-e01104c31cbc.jpg" alt="" />
+                <aside class="notes" data-markdown>
+                    * The minset. Trying to add more features.
+                    * No code, less code to maintin, don't lose time, less chance for bugs.
+                </aside>
             </section>
 
             <!-- Safe guards -->
             <section>
-        <h2>Safe Guards</h2>
-        <pre>
-          <code class="elm" data-trim>
-throw new \Exception();
-          </code>
-        </pre>
+                <h2>Safe Guards</h2>
+                <pre>
+                  <code class="elm" data-trim>
+        throw new \Exception();
+                  </code>
+
+                </pre>
 
                 <img src="https://cloud.githubusercontent.com/assets/125707/20651142/dca0c8e4-b4e7-11e6-957e-2ee78b2cfc44.jpg" alt="" />
+
+                <aside class="notes" data-markdown>
+                    * But who to prevent wrong data if there's no compiler, or types?
+                </aside>
             </section>
 
             <section>
@@ -958,6 +1019,10 @@ class GroupCheckTest extends UnitTestCase {
           </code>
         </pre>
 
+        <aside class="notes" data-markdown>
+            * Out of 120 files, OG8 has 50 test files
+        </aside>
+
       </section>
 
       <section>
@@ -980,6 +1045,13 @@ class GroupCheckTest extends UnitTestCase {
       <!-- Unio -->
       <section>
         <img src="https://cloud.githubusercontent.com/assets/125707/21800742/a35832fe-d727-11e6-9247-410fc3591c7e.gif" alt="" />
+
+        <aside class="notes" data-markdown>
+            * Everything that you are seeing didn't exist 2.5 month ago
+            * Drupal allowed us to quickly scafolld a new installation profile,
+            with migrate and OG and RESTful. This is D7.
+            * And in Elm it allowed us to move fast without having the fear of breaking old code, and painfull regressions.
+        </aside>
       </section>
 
       <!-- Unio Backend -->
